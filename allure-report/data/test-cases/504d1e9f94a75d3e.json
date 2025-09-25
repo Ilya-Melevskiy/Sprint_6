@@ -1,0 +1,85 @@
+{
+  "uid" : "504d1e9f94a75d3e",
+  "name" : "test_click_scooter_logo_open_main_page",
+  "fullName" : "tests.test_logo_header.TestLogoHeader#test_click_scooter_logo_open_main_page",
+  "historyId" : "7f5fef2dd27c1413b7b62e1d75e7cd9e",
+  "time" : {
+    "start" : 1758794559452,
+    "stop" : 1758794566656,
+    "duration" : 7204
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1758794554431,
+      "stop" : 1758794559452,
+      "duration" : 5021
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1758794566657,
+      "stop" : 1758794569328,
+      "duration" : 2671
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_logo_header"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogoHeader"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7VA5JRG"
+  }, {
+    "name" : "thread",
+    "value" : "3068-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_logo_header"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "504d1e9f94a75d3e.json",
+  "parameterValues" : [ ]
+}

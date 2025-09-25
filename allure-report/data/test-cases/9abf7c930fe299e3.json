@@ -1,0 +1,85 @@
+{
+  "uid" : "9abf7c930fe299e3",
+  "name" : "test_check_text_in_it_possible_to_extend_an_order_or_return_the_scooter_earlier_accordeon_panel",
+  "fullName" : "tests.test_accordeon_main_page.TestAccordeonMainPage#test_check_text_in_it_possible_to_extend_an_order_or_return_the_scooter_earlier_accordeon_panel",
+  "historyId" : "157bd33fe5a943a378f024cc29b99fe3",
+  "time" : {
+    "start" : 1758794501121,
+    "stop" : 1758794509234,
+    "duration" : 8113
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1758794496199,
+      "stop" : 1758794501121,
+      "duration" : 4922
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1758794509235,
+      "stop" : 1758794511926,
+      "duration" : 2691
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_accordeon_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAccordeonMainPage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7VA5JRG"
+  }, {
+    "name" : "thread",
+    "value" : "3068-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_accordeon_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9abf7c930fe299e3.json",
+  "parameterValues" : [ ]
+}
