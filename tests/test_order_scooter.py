@@ -1,6 +1,5 @@
 from pages.main_page import MainPage
 from pages.order_page import OrderPage
-from pages.base_page import BasePage
 import pytest
 
 
@@ -34,10 +33,9 @@ class TestOrderScooter:
     @pytest.mark.parametrize('order_form', test_order_form)
     def test_order_scooter_success(self, driver, order_form):
         main_page = MainPage(driver)
-        base_page = BasePage(driver)
         order_page = OrderPage(driver)
-        main_page.open()
-        base_page.click_accept_cookie()
+        main_page.open_main_page()
+        main_page.click_accept_cookie()
         main_page.scroll_to_element(order_form['button_order'])
         main_page.click_order_button(order_form['button_order'])
         order_page.set_first_name_input(order_form['first_name'])
