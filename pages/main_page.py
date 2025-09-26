@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+import allure
 
 
 class MainPage(BasePage):
@@ -25,17 +26,22 @@ class MainPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
+    @allure.step('Открыть главную страницу')
     def open_main_page(self):
         self.open('https://qa-scooter.praktikum-services.ru/')
 
+    @allure.step('Клик на вопрос в аккордеоне')
     def click_question_in_accordeon(self, locator):
         self.click(locator)
 
+    @allure.step('Получить текст ответа в аккордеона')
     def text_response_in_accordeon(self, locator):
         return self.text(locator)
 
+    @allure.step('Клик на кнопку "Заказать"')
     def click_order_button(self, locator):
         self.click(locator)
 
+    @allure.step('Клик на кнопку "Заказать" в хэдере')
     def click_order_button_in_header(self):
         self.click(self.ORDER_BUTTON_IN_HEADER)

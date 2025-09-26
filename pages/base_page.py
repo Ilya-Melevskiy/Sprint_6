@@ -1,6 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+import allure
 
 
 class BasePage:
@@ -26,7 +27,7 @@ class BasePage:
     
     def wait_presence(self, locator):
         WebDriverWait(self.driver, 5).until(EC.presence_of_element_located(locator))
-
+    
     def send_keys(self, locator, text):
         self.find_element(locator).clear()
         self.find_element(locator).send_keys(text)
@@ -34,15 +35,19 @@ class BasePage:
     def open(self, url):
         self.driver.get(url)
 
+    @allure.step('Клик на "да все привыкли" в куках')
     def click_accept_cookie(self):
         self.click(self.ACCEPT_COOKIE_BUTTON)
 
+    @allure.step('Клик на лого "Самокат" в хэдере')
     def click_scooter_logo_in_header(self):
         self.click(self.SCOOTER_LOGO_IN_HEADER)
 
+    @allure.step('Клик на лого "Яндекс" в хэдере')
     def click_yandex_logo_in_header(self):
         self.click(self.YANDEX_LOGO_IN_HEADER)
 
+    @allure.step('Получить url страницы')
     def get_current_url(self):
         return self.driver.current_url
     

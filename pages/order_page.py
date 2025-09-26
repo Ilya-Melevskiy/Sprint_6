@@ -1,7 +1,6 @@
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+import allure
 
 
 class OrderPage(BasePage):
@@ -31,50 +30,66 @@ class OrderPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
+    @allure.step('Заполнить поле "Имя": {first_name}')
     def set_first_name_input(self, first_name):
         self.send_keys(self.FIRST_NAME_INPUT, first_name)
 
+    @allure.step('Заполнить поле "Фамилия": {last_name}')
     def set_last_name_input(self, last_name):
         self.send_keys(self.LAST_NAME_INPUT, last_name)
 
+    @allure.step('Заполнить поле "Адрес": {address}')
     def set_address_input(self, address):
         self.send_keys(self.ADDRESS_INPUT, address)
 
+    @allure.step('Клик в поле "Станция метро"')
     def click_metro_station_input(self):
         self.click(self.METRO_STATION_INPUT)
 
+    @allure.step('Выбрать станцию в поле "Станция метро"')
     def set_metro_station_input(self,station_locator):
         self.click(station_locator)
 
+    @allure.step('Выбрать станцию в поле "Станция метро"')
     def set_phone_number_input(self, phone_number):
         self.send_keys(self.PHONE_NUMBER_INPUT, phone_number)
 
+    @allure.step('Клик по кнопке "Далее"')
     def click_next_button(self):
         self.click(self.NEXT_BUTTON)
 
+    @allure.step('Клик в поле "Когда привезти самокат"')
     def click_when_to_bring_input(self):
         self.click(self.WHEN_TO_BRING_INPUT)  
 
+    @allure.step('Заполнить поле "Когда привезти самокат"')
     def set_when_to_bring_input(self, date_locator):
         self.click(date_locator)
      
+    @allure.step('Клик в поле "Срок аренды"')
     def click_rental_period_input(self):
         self.click(self.RENTAL_PERIOD_INPUT)
 
+    @allure.step('Заполнить поле "Срок аренды"')
     def set_rental_period_input(self, period_locator):
         self.click(period_locator)
 
+    @allure.step('Выбрать цвет в поле "Цвет самоката"')
     def click_color_checkboxes(self, color_locator):
         self.click(color_locator)   
 
+    @allure.step('Заполнить поле "Комментарий"')
     def set_comment_input(self, comment):
         self.send_keys(self.COMMENT_INPUT, comment)
 
+    @allure.step('Клик на кнопку "Заказать" в форме заказа самоката')
     def click_order_button_in_order_form(self):
         self.click(self.ORDER_BUTTON_IN_ORDER_FORM)
 
+    @allure.step('Клик на кнопку "Да" в окне "Хотите оформить заказ?"')
     def click_yes_button_in_want_to_place_an_order_window(self):
         self.click(self.YES_BUTTON_IN_WANT_TO_PLACE_AN_ORDER_WINDOW)
 
+    @allure.step('Получить заголовок окна об успешном заказе')
     def text_order_has_been_placed_text_in_modal_window (self):
         return self.text(self.ORDER_HAS_BEEN_PLACED_TEXT_IN_MODAL_WINDOW)
