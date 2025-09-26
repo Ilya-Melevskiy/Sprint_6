@@ -1,5 +1,7 @@
 from pages.main_page import MainPage
 import pytest
+import allure
+
 
 class TestAccordeonMainPage:
 
@@ -49,9 +51,11 @@ class TestAccordeonMainPage:
         'expected_response': "Да, обязательно. Всем самокатов! И Москве, и Московской области."
         }
     ]
+    
 
     @pytest.mark.parametrize('accordeon', test_accordeon)
     def test_check_text_in_how_much_does_it_cost_and_how_do_i_pay_accordeon_panel(self, driver, accordeon):
+        allure.dynamic.title(f"Проверка ответа '{accordeon['expected_response']}' в аккордеоне на главной странице")
         main_page = MainPage(driver)
         main_page.open_main_page()
         main_page.click_accept_cookie()

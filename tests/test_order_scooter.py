@@ -1,6 +1,7 @@
 from pages.main_page import MainPage
 from pages.order_page import OrderPage
 import pytest
+import allure
 
 
 class TestOrderScooter:
@@ -30,6 +31,7 @@ class TestOrderScooter:
     }
     ]
 
+    @allure.title('Появление окна "Заказ оформлен" после заказа самоката')
     @pytest.mark.parametrize('order_form', test_order_form)
     def test_order_scooter_success(self, driver, order_form):
         main_page = MainPage(driver)
